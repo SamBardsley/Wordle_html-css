@@ -1,0 +1,28 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #121214;
+}
+
+.grid {
+  margin: auto;
+  width: 50%
+}
+
+.answer {
+  font-size: 35px;
+  color: white;
+  font-family: Helvetica Neue;
+  font-weight: 600;
+  text-align: center;
+  height: 100px;
+  width: 15%;
+  background-color: #121214;
+  border-style: solid;
+  border-color: #38383a;
+  display: inline-block;
+  margin-right: 1%;
+  margin-left: 0;
+}
+
+
