@@ -1,1 +1,3 @@
 color theme
+translate java to js
+auto select next box when one is filled

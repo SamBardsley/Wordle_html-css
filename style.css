@@ -16,7 +16,7 @@ html, body.light {
 
 h1 {
   text-align: center;
-  color: orange;
+  color: #ff8c00;
   @font-face {
     font-family: ObadiahProRegular;
     src: url("ObadiahProRegular.otf");
@@ -26,6 +26,10 @@ h1 {
 .grid {
   margin: auto;
   width: 50%
+}
+
+.space {
+  block-size: 5px;
 }
 
 .answer {
@@ -48,7 +52,7 @@ h1 {
   display: inline-flex;
   height: 40px;
   padding: 0;
-  background: orange;
+  background: #ff8c00;
   border: none;
   outline: none;
   border-radius: 5px;
