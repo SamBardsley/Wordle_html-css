@@ -4,6 +4,15 @@ html, body {
   background-color: #121214;
 }
 
+h1 {
+  text-align: center;
+  color: orange;
+  @font-face {
+    font-family: ObadiahProRegular;
+    src: url("ObadiahProRegular.otf");
+  }
+}
+
 .grid {
   margin: auto;
   width: 50%
