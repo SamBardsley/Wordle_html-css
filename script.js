@@ -11,6 +11,13 @@ btn.addEventListener('click', function handleClick() {
   }
 });
 
+function jump001(field, autoMove) {
+  if(field.value.length >= field.maxLength) {
+    console.log(this);
+    field.nextElementSibling.focus();
+    //document.getElementById("").focus();
+  }
+}
 // rest of code
 var myInputs = document.querySelectorAll(".grid");
 var wordleWord = "smart";
@@ -25,12 +32,8 @@ for (var i=0; i<myInputs.length; i++) {
 
 function checkLetter(e) {
   letterCount++;
-  if(letterCount == 5) alert("I check");
-  else alert("I wait");
-  
-  myGuess += this.value.charAt(0);
-  console.log(this);
-  alert(this.value);
+  if(letterCount == 5) console.log();
+  else console.log();
 
   // check to see if all input boxes in row have a letter value
   // we will need to get each input box in the row
