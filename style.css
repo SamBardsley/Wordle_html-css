@@ -17,10 +17,8 @@ html, body.light {
 h1 {
   text-align: center;
   color: #ff8c00;
-  @font-face {
-    font-family: ObadiahProRegular;
-    src: url("ObadiahProRegular.otf");
-  }
+  margin: 0;
+  padding: 15px;
 }
 
 .grid {
