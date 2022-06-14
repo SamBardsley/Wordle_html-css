@@ -7,6 +7,7 @@ html, body {
 html, body.dark {
   background-color: #121214;
   color: #FFFFFF;
+  
 }
 
 html, body.light {
@@ -18,16 +19,29 @@ h1 {
   text-align: center;
   color: #ff8c00;
   margin: 0;
-  padding: 15px;
+  padding: 20px;
 }
 
 .grid {
-  margin: auto;
-  width: 50%
+  margin:0px auto;
+  width: 50%;
+}
+
+.row1, .row2, .row3, .row4, .row5, .row6 {
+  display: flex;
+  justify-content: center;
 }
 
 .space {
   block-size: 5px;
+}
+
+html, body.light, .answer {
+  background-color: #FFFFFF;
+}
+
+html, body.dark, .answer {
+  background-color:#121214;
 }
 
 .answer {
@@ -39,7 +53,6 @@ h1 {
   text-align: center;
   height: 100px;
   width: 15%;
-  background-color: #121214;
   border-style: solid;
   border-color: #38383a;
   display: inline-block;
