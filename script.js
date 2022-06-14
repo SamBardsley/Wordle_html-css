@@ -18,6 +18,7 @@ function jump001(field, autoMove) {
     //document.getElementById("").focus();
   }
 }
+
 // rest of code
 var myInputs = document.querySelectorAll(".grid");
 var wordleWord = "smart";
