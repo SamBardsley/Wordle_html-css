@@ -33,8 +33,7 @@ for (var i=0; i<myInputs.length; i++) {
 
 function checkLetter(e) {
   letterCount++;
-  if(letterCount == 5) console.log();
-  else console.log();
+  if(letterCount == 5) sendGuess();
 
   // check to see if all input boxes in row have a letter value
   // we will need to get each input box in the row
@@ -43,4 +42,8 @@ function checkLetter(e) {
   // splitting up the guess into individual letters, answer too
   // each guess letter against each answer letter 
   // will be two for loops
+}
+
+function sendGuess() {
+  
 }
