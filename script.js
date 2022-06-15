@@ -22,28 +22,34 @@ function jump001(field, autoMove) {
 // rest of code
 var myInputs = document.querySelectorAll(".grid");
 var wordleWord = "smart";
-var myGuess = "";
 var letterCount = 0;
+var rowCount = 0;
 
 console.log(myInputs);
+loop();
 
-for (var i=0; i<myInputs.length; i++) {
-  myInputs[i].addEventListener("change", checkLetter);
+function loop() {
+  for (var i=0; i<5; i++) { 
+    myInputs[i].addEventListener("change", checkLetter);
+  }
 }
 
 function checkLetter(e) {
-  letterCount++;
-  if(letterCount == 5) sendGuess();
+  var myGuess="";
+  var input = e.target;
+  var row = input.parentNode;
+  var inputs = row.querySelectorAll("input");
+  for (var i=0; i<inputs.length; i++) {
+    myGuess+=inputs[i].value;
+  }
 
-  // check to see if all input boxes in row have a letter value
-  // we will need to get each input box in the row
-  // loop over, see if they are all filled, get word
-
-  // splitting up the guess into individual letters, answer too
-  // each guess letter against each answer letter 
-  // will be two for loops
+  if (myGuess.length==5) {
+    compareToAnswer(myGuess);
+    loop();
+  }
 }
 
-function sendGuess() {
+// conversion from java begins here
+function  compareToAnswer(myGuess) {
   
 }
