@@ -20,11 +20,18 @@ function jump001(field, autoMove) {
 }
 
 // rest of code
+const answers = ["women", "death", "cabin", "words", "among", "ready", "truth", "false", "ashes","sonic"
+,"react","wrath","fifty","reach","chose","chase","slash","faked","snake","sammy","lyric","zebra","gavel"
+,"break","broke","brave","quest","crack","bulky","cents","night","girly","awake","manly","corps","audio"
+,"catch","clout","sword","irony","raise","venom","hired","drawn","oddly","extra","under","greet","dweeb"
+,"fewer","paris","amaze","glass","cited","bleak","north","south","notes","needs","forum","power","wrong"];
+var wordleWord = answers[Math.floor(Math.random()*63)];
+
+
 var myInputs = document.querySelectorAll(".grid");
 var wordleWord = "smart";
 var letterCount = 0;
 var rowCount = 0;
-
 console.log(myInputs);
 loop();
 
@@ -42,16 +49,16 @@ function checkLetter(e) {
   for (var i=0; i<inputs.length; i++) {
     myGuess+=inputs[i].value;
   }
-
   if (myGuess.length==5) {
     compareToAnswer(myGuess);
-    // loop();
+    loop();
   }
 }
 
 // conversion from java begins here
 function  compareToAnswer(myGuess) {
-  var array = [,,,,,];
+  alert(myGuess);
+  var array = [];
   for(var i = 0; i < wordleWord.length; i++) {
     if(input == wordleWord.charAt(i)) {
       array[i] = 2;
