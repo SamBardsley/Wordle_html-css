@@ -45,11 +45,23 @@ function checkLetter(e) {
 
   if (myGuess.length==5) {
     compareToAnswer(myGuess);
-    loop();
+    // loop();
   }
 }
 
 // conversion from java begins here
 function  compareToAnswer(myGuess) {
-  
+  var array = [,,,,,];
+  for(var i = 0; i < wordleWord.length; i++) {
+    if(input == wordleWord.charAt(i)) {
+      array[i] = 2;
+    } else {
+      for(var j = 0; j < wordleWord.length; j++) {
+        if(input == wordleWord.charAt(j)) {
+          array[i] = 1;
+        }
+      }
+    }
+    console.log(array[i]);
+  }
 }
