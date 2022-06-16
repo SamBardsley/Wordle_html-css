@@ -55,7 +55,6 @@ function checkLetter(e) {
 
 // conversion from java begins here
 function  compareToAnswer(myGuess, row) {
-  alert(myGuess);
   var array = [0, 0, 0, 0, 0, 0];
   for(var i = 0; i < wordleWord.length; i++) {
     if(myGuess.charAt(i) == wordleWord.charAt(i)) {
@@ -69,16 +68,16 @@ function  compareToAnswer(myGuess, row) {
     }
   }
   rowCount++;
-  color(array, row);
+  darkColor(array, row);
 }
 
-function color(array, row) {
+function darkColor(array, row) {
   const children = row.children;
   for (var i=0; i<array.length; i++) {
     if(array[i]==0) {
-      children[i].style.backgroundColor = 'red' ;
+      children[i].style.backgroundColor = 'grey' ;
     } else if (array[i]==1) {
-      children[i].style.backgroundColor = 'yellow' ;
+      children[i].style.backgroundColor = '#ff8c00' ;
     } else {
       children[i].style.backgroundColor = 'green' ;
     }
