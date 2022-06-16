@@ -26,6 +26,7 @@ const answers = ["women", "death", "cabin", "words", "among", "ready", "truth", 
 ,"catch","clout","sword","irony","raise","venom","hired","drawn","oddly","extra","under","greet","dweeb"
 ,"fewer","paris","amaze","glass","cited","bleak","north","south","notes","needs","forum","power","wrong"];
 var wordleWord = answers[Math.floor(Math.random()*63)];
+alert("word=" + wordleWord);
 
 
 var myInputs = document.querySelectorAll(".grid");
@@ -60,11 +61,11 @@ function  compareToAnswer(myGuess) {
   alert(myGuess);
   var array = [];
   for(var i = 0; i < wordleWord.length; i++) {
-    if(input == wordleWord.charAt(i)) {
+    if(myGuess == wordleWord.charAt(i)) {
       array[i] = 2;
     } else {
       for(var j = 0; j < wordleWord.length; j++) {
-        if(input == wordleWord.charAt(j)) {
+        if(myGuess == wordleWord.charAt(j)) {
           array[i] = 1;
         }
       }
