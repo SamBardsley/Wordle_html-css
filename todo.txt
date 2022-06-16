@@ -1,3 +1,4 @@
-color theme
-translate java to js
-auto select next box when one is filled
+1) make the switch to next box less laggy
+2) make backspace go to previous box
+3) add animation
+4) make it so user cant edit previous or future boxes
