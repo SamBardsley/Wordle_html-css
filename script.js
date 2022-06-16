@@ -14,7 +14,6 @@ btn.addEventListener('click', function handleClick() {
 function jump001(field, autoMove) {
   if(field.value.length >= field.maxLength) {
     field.nextElementSibling.focus();
-    //document.getElementById("").focus();
   }
 }
 
@@ -24,7 +23,7 @@ const answers = ["women", "death", "cabin", "words", "among", "ready", "truth", 
 ,"break","broke","brave","quest","crack","bulky","cents","night","girly","awake","manly","corps","audio"
 ,"catch","clout","sword","irony","raise","venom","hired","drawn","oddly","extra","under","greet","dweeb"
 ,"fewer","paris","amaze","glass","cited","bleak","north","south","notes","needs","forum","power","wrong"];
-var wordleWord = answers[Math.floor(Math.random()*63)];
+var wordleWord = answers[Math.floor(Math.random()*64)];
 alert("word=" + wordleWord);
 
 
@@ -69,6 +68,7 @@ function  compareToAnswer(myGuess, row) {
   }
   rowCount++;
   darkColor(array, row);
+  
 }
 
 function darkColor(array, row) {
