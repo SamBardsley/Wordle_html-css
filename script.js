@@ -30,7 +30,6 @@ alert("word=" + wordleWord);
 
 
 var myInputs = document.querySelectorAll(".grid");
-var wordleWord = "smart";
 var letterCount = 0;
 var rowCount = 0;
 console.log(myInputs);
@@ -59,17 +58,17 @@ function checkLetter(e) {
 // conversion from java begins here
 function  compareToAnswer(myGuess) {
   alert(myGuess);
-  var array = [];
+  var array = [0, 0, 0, 0, 0, 0];
   for(var i = 0; i < wordleWord.length; i++) {
-    if(myGuess == wordleWord.charAt(i)) {
+    if(myGuess.charAt(i) == wordleWord.charAt(i)) {
       array[i] = 2;
     } else {
       for(var j = 0; j < wordleWord.length; j++) {
-        if(myGuess == wordleWord.charAt(j)) {
+        if(myGuess.charAt(i) == wordleWord.charAt(j)) {
           array[i] = 1;
         }
       }
     }
-    console.log(array[i]);
+    console.log(array[0]);
   }
 }
