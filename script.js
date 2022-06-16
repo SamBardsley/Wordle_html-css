@@ -68,7 +68,7 @@ function  compareToAnswer(myGuess, row) {
   }
   rowCount++;
   darkColor(array, row);
-  
+
 }
 
 function darkColor(array, row) {
@@ -81,5 +81,6 @@ function darkColor(array, row) {
     } else {
       children[i].style.backgroundColor = 'green' ;
     }
+    children[i].style.color = 'white' ;
   }
 }
