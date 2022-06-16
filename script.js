@@ -67,11 +67,11 @@ function  compareToAnswer(myGuess, row) {
     }
   }
   rowCount++;
-  darkColor(array, row);
+  Color(array, row);
 
 }
 
-function darkColor(array, row) {
+function Color(array, row) {
   const children = row.children;
   for (var i=0; i<array.length; i++) {
     if(array[i]==0) {
