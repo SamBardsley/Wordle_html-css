@@ -13,7 +13,6 @@ btn.addEventListener('click', function handleClick() {
 
 function jump001(field, autoMove) {
   if(field.value.length >= field.maxLength) {
-    console.log(this);
     field.nextElementSibling.focus();
     //document.getElementById("").focus();
   }
@@ -32,7 +31,6 @@ alert("word=" + wordleWord);
 var myInputs = document.querySelectorAll(".grid");
 var letterCount = 0;
 var rowCount = 0;
-console.log(myInputs);
 loop();
 
 function loop() {
@@ -50,13 +48,13 @@ function checkLetter(e) {
     myGuess+=inputs[i].value;
   }
   if (myGuess.length==5) {
-    compareToAnswer(myGuess);
+    compareToAnswer(myGuess, row);
     loop();
   }
 }
 
 // conversion from java begins here
-function  compareToAnswer(myGuess) {
+function  compareToAnswer(myGuess, row) {
   alert(myGuess);
   var array = [0, 0, 0, 0, 0, 0];
   for(var i = 0; i < wordleWord.length; i++) {
@@ -69,6 +67,20 @@ function  compareToAnswer(myGuess) {
         }
       }
     }
-    console.log(array[0]);
+  }
+  rowCount++;
+  color(array, row);
+}
+
+function color(array, row) {
+  const children = row.children;
+  for (var i=0; i<array.length; i++) {
+    if(array[i]==0) {
+      children[i].style.backgroundColor = 'red' ;
+    } else if (array[i]==1) {
+      children[i].style.backgroundColor = 'yellow' ;
+    } else {
+      children[i].style.backgroundColor = 'green' ;
+    }
   }
 }
